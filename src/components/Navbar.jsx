@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {Search} from './Search';
 
-export const Navbar = ({darkTheme, setDarkTheme}) => {
+export const Navbar = ({ darkTheme, setDarkTheme }) => {
     //console.log(darkTheme.darkTheme);
     //console.log(setDarkTheme);
     return (
@@ -9,7 +10,7 @@ export const Navbar = ({darkTheme, setDarkTheme}) => {
             <div className="flex justify-between items-center space-x-5 w-screen ">
                 <Link to='/google-clone'>
                     <p className='text-2xl bg-blue-500 font-bold text-white py-1 px-2 rounded dark:bg-gray-500 dark:text-gray-900'>
-                        Googly🔎
+                        Gogloo🔎
                     </p>
                 </Link>
                 <button type="button"
@@ -18,6 +19,7 @@ export const Navbar = ({darkTheme, setDarkTheme}) => {
                     {darkTheme ? '💡 Light' : '🌙 Dark'}
                 </button>
             </div>
+            <Search />
         </div>
     );
 }
